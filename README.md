@@ -4,7 +4,7 @@
 
 # chroot
 
-```sh
+```
 $ ROOTFS=$(mktemp -d)
 $ echo "Hello" > $ROOTFS/test.txt
 $ mkdir -p $ROOTFS/{bin,/lib/x86_64-linux-gnu,lib64}
@@ -32,4 +32,9 @@ PID   USER     TIME  COMMAND
    26 root      0:00 /bin/sh
    27 root      0:00 ps
 / # exit
+```
+
+⚠️ If you encounter the following error in gitpod, try to recreate the gitpod workspace.
+```
+docker: Error response from daemon: OCI runtime create failed
 ```
