@@ -64,7 +64,7 @@ Now, we will use the unshare command to create a container. The options are roug
     Isolate each namespace. For example, pid separates the process space. This can be experienced by using the `ps` command, where the source and visible processes are different.
 - `--fork`   
     When executing a command, `fork` is used. This is because the pid namespace will be applied from the new process. This is because the pid namespace will be applied from the new process. You don't need to understand this at first.
-- `--mount-proc`
+- `--mount-proc`  
     This is the magic that allows the `ps` command to run. More precisely, it is an option to mount procfs so that `ps` commands can be executed.
 - `--root rootfs`  
     We will use the `rootfs` created in the first part as `/`. You saw this in the previous chapter where we explained the technique to use.
