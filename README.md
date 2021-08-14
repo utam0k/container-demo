@@ -1,6 +1,6 @@
 # container-demo
 This repository is a demo that allows you to experience the technology bihind container.
-You will need **Linux** to try this demo, however you can try it in your browser by using the [gitpod](https://gitpod.io/#https://github.com/utam0k/container-demo) we provide.  
+You will need **Linux** to try this demo, however you can try most of the demos in your browser by using the [gitpod](https://gitpod.io/#https://github.com/utam0k/container-demo) we provide.  
 
 Technology you can experience.
 - [chroot](https://man7.org/linux/man-pages/man1/chroot.1.html) - Change the `/` directory
@@ -50,6 +50,7 @@ exit
 # make a container-like
 In this chapter, we will use `unshare` command to create a namespace and the technique of changing `/` introduced in the previous chapter to create something container-like.
 Namespace is a technique for isolating manipulable resources. For example, it isolates the space of a process.
+Sorry, this is the only chapter that cannot be executed due to gitpod security.
 
 Create the `/` directory where the container will work as in the previous chapter.
 In this article, we will use `busybox` to create a container.
