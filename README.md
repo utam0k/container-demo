@@ -110,7 +110,7 @@ If you run the `ps` command in the joined container, you will see that the proce
 ```
 / # ps -ef
 PID   USER     TIME  COMMAND
-    1 root      0:00 sh
+    1 root      0:00 sleep
    26 root      0:00 /bin/sh
    27 root      0:00 ps
 / # exit
