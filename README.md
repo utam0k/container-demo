@@ -1,4 +1,6 @@
 # container-demo
+This repository is a demo that allows you to experience the technology bihind container.
+You will need **Linux** to try this demo, however you can try it in your browser by using the [gitpod](https://gitpod.io/#https://github.com/utam0k/container-demo) we provide.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/utam0k/container-demo)
 
@@ -12,13 +14,24 @@ $ cp -v /bin/{bash,cat} $ROOTFS/bin
 $ ldd /bin/cat | grep -o '/lib.*\.[0-9]' | xargs -I{} cp -v {} $ROOTFS/{} 
 $ ldd /bin/bash | grep -o '/lib.*\.[0-9]' | xargs -I{} cp -v {} $ROOTFS/{} 
 $ sudo chroot $ROOTFS bash
-bash-5.0# cat test.txt
+bash-5.0# cat /test.txt
 Hello
 bash-5.0# exit
 exit
 ```
 
 # make a container-like
+
+```
+$ cd $(mktemp -d)
+$ mkdir rootfs
+$ docker export $(docker create busybox) | tar -C rootfs -xvf -
+$ sudo unshare -m -u -n -i -p -f --mount-proc sh
+# ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 11:50 pts/3    00:00:00 sh
+root           2       1  0 11:50 pts/3    00:00:00 ps -ef
+```
 
 # join an existing container
 
