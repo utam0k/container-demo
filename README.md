@@ -51,7 +51,7 @@ exit
 In this chapter, we will use `unshare` command to create a namespace and the technique of changing `/` introduced in the previous chapter to create something container-like.
 Namespace is a technique for isolating manipulable resources. For example, it isolates the space of a process.
 
-⚠️ Sorry, this is the only chapter that cannot be executed due to gitpod security.
+⚠️ his is the only chapter that cannot be executed due to gitpod security.
 
 Create the `/` directory where the container will work as in the previous chapter.
 In this article, we will use `busybox` to create a container.
