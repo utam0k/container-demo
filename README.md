@@ -1,6 +1,6 @@
 # container-demo
 This repository is a demo that allows you to experience the technology bihind container.
-You will need **Linux** to try this demo, however you can try most of the demos in your browser by using the [gitpod](https://gitpod.io/#https://github.com/utam0k/container-demo) we provide.  
+You will need **Linux** to try this demo, however you can try most of the demos in your browser by using the GitHub Codespace.
 
 Technology you can experience.
 - [chroot](https://man7.org/linux/man-pages/man1/chroot.1.html) - Change the `/` directory
@@ -8,10 +8,10 @@ Technology you can experience.
 
 Enjoy the container technology 🥰
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/utam0k/container-demo)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/utam0k/container-demo)
 
 ## Target audience
-The target audience is people who have been exposed to containers such as docker, podman, and K8s, but want to know more about what containers are.
+The target audience is people who have bee/n exposed to containers such as docker, podman, and K8s, but want to know more about what containers are.
 
 # chroot
 In this chart, we will try to change `/` using `chroot`.
@@ -50,8 +50,6 @@ exit
 # make a container-like
 In this chapter, we will use `unshare` command to create a namespace and the technique of changing `/` introduced in the previous chapter to create something container-like.
 Namespace is a technique for isolating manipulable resources. For example, it isolates the space of a process.
-
-⚠️ This is the only chapter that cannot be executed due to gitpod security.
 
 Create the `/` directory where the container will work as in the previous chapter.
 In this article, we will use `busybox` to create a container.
@@ -115,11 +113,6 @@ PID   USER     TIME  COMMAND
    26 root      0:00 /bin/sh
    27 root      0:00 ps
 / # exit
-```
-
-⚠️ If you encounter the following error in gitpod, try to recreate the gitpod workspace.
-```
-docker: Error response from daemon: OCI runtime create failed
 ```
 
 ## Reference
